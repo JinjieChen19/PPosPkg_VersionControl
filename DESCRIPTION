@@ -1,0 +1,22 @@
+Package: PPoSPkg
+Title: BAYESAIN POSTERIOR PREDICTIVE PROBABILITY OF SUCCESS
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Jinjie", family = "Chen", email = "jinjie.chen.2023@gmail.com",
+           role = c("aut", "cre"))
+Description: This package is used to calculate the posterior predictive probability of success (PPoS) for a Bayesian model. The PPoS is the probability that the true response is greater than a threshold value. The PPoS is calculated by integrating the posterior predictive distribution of the response over the region of interest. The package provides functions to calculate the PPoS for a variety of models, including linear regression, logistic regression, and survival models. The package also provides functions to calculate the PPoS for a variety of threshold values. The package is designed to be easy to use and flexible, allowing users to specify their own models and threshold values.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    VGAM,
+    purrr,
+    magrittr,
+    dplyr
+URL: https://github.com/JinjieChen19/PPoSPkg
+BugReports: https://github.com/JinjieChen19/PPoSPkg/issues
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

@@ -1,0 +1,19 @@
+---
+title: "Simulate Operating Characteristics (OC) Using Interim Data and Posterior Predictive Probability of Success, Defined by the Bayesian Go/No-Go Dual-Criterion"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Simulate Operating Characteristics (OC) Using Interim Data and Posterior Predictive Probability of Success, Defined by the Bayesian Go/No-Go Dual-Criterion}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(PPoSPkg)
+```
