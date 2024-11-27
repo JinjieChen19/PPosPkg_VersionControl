@@ -36,10 +36,10 @@
 #'       or "final go"/"final no-go").
 #'   }
 #'
-#' @export simulate_adaptive_trial_single_arm_bin
+#' @export sim_multi_IAs_1arm_bin_1run
 #'
 #' @examples
-#' result <- simulate_adaptive_trial_single_arm_bin(
+#' result <- sim_multi_IAs_1arm_bin_1run(
 #'   alpha_prior = 1,
 #'   beta_prior = 1,
 #'   N = 40,
@@ -54,7 +54,7 @@
 #'   seed = sample(1e6,1)
 #' )
 #' print(result)
-simulate_adaptive_trial_single_arm_bin <- function(alpha_prior, beta_prior,
+sim_multi_IAs_1arm_bin_1run <- function(alpha_prior, beta_prior,
                                     N, n_interim,
                                     go_cutoffs, no_go_cutoffs,
                                     cv1, cv2, sig_level,

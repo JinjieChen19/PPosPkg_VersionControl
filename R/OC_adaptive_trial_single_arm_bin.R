@@ -1,4 +1,4 @@
-#' Simulate Multiple Bayesian Adaptive Trials and Summarize Results
+#' Simulate Multiple Bayesian Adaptive Trials allowing for multiple interims, and Summarize Results
 #'
 #' This function simulates a Bayesian adaptive trial for a specified number of iterations
 #' (e.g., 1000) and summarizes the results, including counts and percentages of each
@@ -36,10 +36,10 @@
 #'   }
 #' @importFrom purrr  map map_dfr
 #' @importFrom dplyr group_by summarise n mutate
-#' @export simulate_multiple_trials
+#' @export sim_multi_IAs_1arm_bin_oc
 #'
 #' @examples
-#' sim <- simulate_multiple_trials(
+#' sim <- sim_multi_IAs_1arm_bin_oc(
 #'   n_sim = 10,
 #'   alpha_prior = 1,
 #'   beta_prior = 1,
@@ -55,7 +55,7 @@
 #'   seed = 12345
 #' )
 #' print(sim$summary)
-simulate_multiple_trials <- function(n_sim = 100, alpha_prior, beta_prior,
+sim_multi_IAs_1arm_bin_oc <- function(n_sim = 100, alpha_prior, beta_prior,
                                      N, n_interim, go_cutoffs, no_go_cutoffs,
                                      cv1, cv2, sig_level, orr,
                                      n_final_iterations = 10000, seed = 12345) {
@@ -65,7 +65,7 @@ simulate_multiple_trials <- function(n_sim = 100, alpha_prior, beta_prior,
 
   # Simulate trials and collect results
   all_results <- map(1:n_sim, ~{
-    simulate_adaptive_trial_single_arm_bin(
+    sim_multi_IAs_1arm_bin_1run(
       alpha_prior = alpha_prior,
       beta_prior = beta_prior,
       N = N,
@@ -103,7 +103,7 @@ simulate_multiple_trials <- function(n_sim = 100, alpha_prior, beta_prior,
 }
 
 
-# sim <- simulate_multiple_trials(
+# sim <- sim_multi_IAs_1arm_bin_oc(
 #   n_sim = 100,
 #   alpha_prior = 1,
 #   beta_prior = 1,
